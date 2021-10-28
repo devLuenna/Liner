@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  max-width: 719px;
+  margin: 0 auto;
+}
+
+.listHeader {
+  font-family: "Montserrat", sans-serif;
+}
+
+.resultMsg {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.resultDetail {
+  color: gray;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.itemsList {
+  margin-top: 3rem;
+  list-style: none;
+}

@@ -13,7 +13,7 @@
 }
 
 .inputBox {
-  width: 35rem;
+  width: 40rem;
   height: 2.5rem;
   display: flex;
   justify-content: space-between;
@@ -33,6 +33,7 @@
 }
 
 .searchBtn {
+  cursor: pointer;
   padding: 0.5rem;
   margin-right: 0.4rem;
 }
