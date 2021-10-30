@@ -23,7 +23,7 @@ export async function getSearchedItems(keyword) {
   }
 }
 
-export async function getRecommendedWords(keyword) {
+export async function getRecommendedWordsList(keyword) {
   try {
     const res = await axios({
       method: 'get',
@@ -35,7 +35,7 @@ export async function getRecommendedWords(keyword) {
       }
     })
 
-    return res.data;
+    return res.data.items;
 
   } catch (err) {
     return console.log(err);

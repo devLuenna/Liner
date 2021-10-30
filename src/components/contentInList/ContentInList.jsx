@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
+import { useHistory } from 'react-router';
 import { ModalInfoContextStore } from '../../contexts/ModalContext';
 import styles from './ContentInList.module.css';
 
 const ContentInList = ({ item }) => {
 
+  const history = useHistory();
   const modalInfo = useContext(ModalInfoContextStore);
 
   const url = new URL(item.url);
@@ -13,15 +15,22 @@ const ContentInList = ({ item }) => {
     window.open("about:blank").location.href = url;
   }
 
+  const goDetailPage = () => {
+    let encodedTitle = encodeURI(item.title);
+    encodedTitle = encodedTitle.replace(/%20/gi, '-');
+    history.push(`/trusted-search/highlight/en/${item.document_id}/${encodedTitle}`);
+  }
+
   return (
     <li className={styles.container}>
       <div className={styles.dataAndImg}>
         <div className={styles.metaData}>
-          <h3 className={styles.title}>{item.title}</h3>
+          <h3 className={styles.title} onClick={goDetailPage}>{item.title}</h3>
           <p className={styles.content}>{item.description}</p>
         </div>
         <div className={styles.thumbnail}>
-          <img src={item.image_url || "../../../images/Thumbnail/default-thumb-1.svg"} alt="thumbnail"/>
+          <img src={item.image_url || "../../../images/Thumbnail/default-thumb-1.svg"} alt="thumbnail"
+          onClick={goDetailPage}/>
         </div>
       </div>
       <div className={styles.urlSection}>

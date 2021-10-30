@@ -1,0 +1,36 @@
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.iconContainer {
+  position: relative;
+}
+.bookmarkIcon,
+.shareIcon {
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.bookmarkIcon:hover,
+.shareIcon:hover {
+  background-color: rgb(245, 245, 245);
+  border-radius: 50%;
+}
+
+.toolTip {
+  position: absolute;
+  color: white;
+  border-radius: 2px;
+  background-color: #4a4c52;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 0.15rem 0.35rem;
+  font-size: 0.7rem;
+  visibility: hidden;
+}
+.iconContainer:hover .toolTip {
+  visibility: visible;
+  z-index: 10;
+}

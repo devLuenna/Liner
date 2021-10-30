@@ -1,0 +1,15 @@
+.container {
+  width: 719px;
+  margin: 0 auto;
+  margin-left: 224px;
+  overflow-y: scroll;
+}
+
+.moreSectionTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  color: #333333;
+  margin-top: 9rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgb(223, 223, 223);
+}

@@ -4,6 +4,7 @@ import styles from './App.module.css';
 import Header from './components/mainHeader/MainHeader';
 import SignInModal from './components/modals/SignInModal';
 import SignUpModal from './components/modals/SignUpModal';
+import ReadSideBar from './components/readSideBar/ReadSideBar';
 import SearchSideBar from './components/searchSideBar/SearchSideBar';
 import { ModalInfoContextStore } from './contexts/ModalContext';
 import Detail from './pages/detail/Detail';
@@ -17,13 +18,20 @@ function App() {
     <>
       <Header />
       <Switch>
-        <Route exact path="/trusted-search/en/:search">
+        <Route exact path="/trusted-search/en/:keyword">
           <body className={styles.container}>
             <List />
             <SearchSideBar />
           </body>
         </Route>
         <Route path="/trusted-search/highlight/en/:id/:title">
+          <body className={styles.container}>
+            <Detail />
+            <section>
+              <SearchSideBar />
+              <ReadSideBar />  
+            </section>
+          </body>
         </Route>
       </Switch>
       {modalInfo.signInModal ? <SignInModal/> : null}
