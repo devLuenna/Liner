@@ -2,6 +2,7 @@
   width: 719px;
   margin: 0 auto;
   margin-left: 224px;
+  overflow-y: scroll;
 }
 
 .listHeader {

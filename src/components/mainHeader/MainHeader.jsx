@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router';
+import React, { useEffect, useState } from 'react';
+import { useHistory, withRouter } from 'react-router-dom';
 import styles from './MainHeader.module.css';
 
-const Header = (props) => {
-
-  const [searchWord, setSearchWord] = useState('');
+const Header = ({ location }) => {
 
   const history = useHistory();
+  const [searchWord, setSearchWord] = useState(
+    location.pathname.substring(19).replace(/-/gi, ' ')
+  );
+
+  useEffect(()=> {
+    setSearchWord(location.pathname.substring(19).replace(/-/gi, ' '));
+  }, [location.pathname])
 
   const goHomepage = () => { //로고 클릭 시 라이너 홈페이지로 이동
     window.location.href = "https://getliner.com/"
@@ -55,4 +60,4 @@ const Header = (props) => {
   )
 }
 
-export default Header;
+export default withRouter(Header);

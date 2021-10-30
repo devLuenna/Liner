@@ -1,0 +1,109 @@
+.modalContainer {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(39, 43, 49, 0.3);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.modalWrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2.5rem;
+  width: 480px;
+  height: 450px;
+  z-index: 30;
+  border-radius: 20px;
+}
+
+.signUpModalWrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2.5rem;
+  width: 500px;
+  height: 520px;
+  z-index: 30;
+  border-radius: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  color: #34383b;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.closeBtn {
+  cursor: pointer;
+  margin-right: -1rem;
+  margin-top: -1rem;
+}
+
+.authBtn {
+  cursor: pointer;
+  display: flex;
+  border: 1px solid #dfe0e3;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.authBtn:hover {
+  background-color: #f5f7f9;
+}
+
+.authText {
+  width: 100%;
+  color: #70757c;
+}
+
+.bottomSection {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.subText {
+  color: #70757c;
+  font-size: 0.88rem;
+}
+
+.signText {
+  cursor: pointer;
+  color: rgb(51, 202, 197);
+  text-decoration: underline;
+  font-size: 0.88rem;
+  margin-left: 0.3rem;
+  font-weight: 500;
+}
+
+.termsContent {
+  color: #70757c;
+  font-size: 0.7rem;
+  display: flex;
+  margin-top: 2rem;
+  text-align: center;
+}
+.termsContent span {
+  width: 100%;
+  display: inline;
+}
+
+.termsLink {
+  text-decoration: underline;
+  font-weight: 500;
+}

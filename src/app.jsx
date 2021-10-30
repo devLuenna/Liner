@@ -1,27 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import styles from './App.module.css';
 import Header from './components/mainHeader/MainHeader';
+import SignInModal from './components/modals/SignInModal';
+import SignUpModal from './components/modals/SignUpModal';
 import SearchSideBar from './components/searchSideBar/SearchSideBar';
 import List from './pages/list/List';
 
 function App() {
-
-  // const [searchWord, setSearchWord] = useState(null);
-  // const [users, setUsers] = useState(null);
-  // const [recommendedWords, setRecommendedWords] = useState([]);
-  // const [items, setItems] = useState([]);
-
-  // const handleListPage = async (keyword) => {
-  //   const searchData = await getSearchedItems(keyword);
-  //   const recommendedData = await getRecommendedWords(keyword);
-  //   setItems(searchData.items);
-  //   console.log(searchData.items)
-  //   setRecommendedWords(recommendedData.items);
-  //   setSearchWord(keyword);
-  //   setUsers(searchData.approx_trust);
-  // }
  
+  const [signInModal, setSignInModal] = useState(false);
+  const [signUpModal, setSignUpModal] = useState(true);
+
   return (
     <>
       <Header />
@@ -35,6 +25,12 @@ function App() {
         <Route path="/trusted-search/highlight/en/:id/:title">
         </Route>
       </Switch>
+      {signInModal 
+      ? <SignInModal />
+      : null}
+      {signUpModal 
+      ? <SignUpModal />
+      : null}
     </>
   );
 }

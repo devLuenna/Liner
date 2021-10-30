@@ -16,13 +16,13 @@
 }
 
 .title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   color: #222222;
 }
 
 .content {
-  color: rgb(123, 125, 130);
+  color: #555555;
   font-size: 0.9rem;
 }
 .thumbnail {
