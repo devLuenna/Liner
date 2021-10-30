@@ -17,6 +17,7 @@ function App() {
     const searchData = await getSearchedItems(keyword);
     const recommendedData = await getRecommendedWords(keyword);
     setItems(searchData.items);
+    console.log(searchData.items)
     setRecommendedWords(recommendedData.items);
     setSearchWord(keyword);
     setUsers(searchData.approx_trust);

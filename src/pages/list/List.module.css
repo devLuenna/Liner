@@ -1,7 +1,7 @@
 .container {
-  width: 100%;
-  max-width: 719px;
+  width: 719px;
   margin: 0 auto;
+  margin-left: 224px;
 }
 
 .listHeader {
@@ -20,6 +20,6 @@
 }
 
 .itemsList {
-  margin-top: 3rem;
+  margin-top: 1.8rem;
   list-style: none;
 }

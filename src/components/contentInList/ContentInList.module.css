@@ -1,0 +1,50 @@
+.container {
+  font-family: "Roboto", sans-serif;
+  width: 712px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eff0f1;
+}
+
+.dataAndImg {
+  display: flex;
+}
+
+.metaData {
+  margin-right: 0.5rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #222222;
+}
+
+.content {
+  color: rgb(123, 125, 130);
+  font-size: 0.9rem;
+}
+
+.urlSection {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+}
+
+.urlContainer {
+  display: flex;
+  align-items: center;
+}
+
+.urlContainer a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: underline;
+  font-size: 0.75rem;
+  margin-left: 0.7rem;
+  color: rgb(126, 126, 126);
+}
+.icons img {
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
