@@ -17,7 +17,6 @@ const List = ({ location }) => {
     async function getAxiosData(){
       const searchData = await getSearchedItems(keyword);
       setItems(searchData.items);
-      console.log(searchData.items);
       setUsers(searchData.approx_trust);
     }
     getAxiosData();
@@ -32,7 +31,7 @@ const List = ({ location }) => {
       </header>
       <ul className={styles.itemsList}>
         {items.map(el => 
-          <ContentInList item={el}/>
+          <ContentInList key={el.document_id} item={el}/>
         )}
       </ul>
     </section>

@@ -4,18 +4,19 @@ import { ModalInfoContextStore } from '../../contexts/ModalContext';
 import styles from './MainHeader.module.css';
 
 const Header = ({ location }) => {
-
+  
   const history = useHistory();
-  const [searchWord, setSearchWord] = useState(
-    location.pathname.substring(19).replace(/-/gi, ' ')
-  );
+  const [searchWord, setSearchWord] = useState('');
   const modalInfo = useContext(ModalInfoContextStore);
 
   useEffect(()=> {
-    setSearchWord(location.pathname.substring(19).replace(/-/gi, ' '));
+    setSearchWord(location.pathname.split('/')[3].replace(/-/gi, ' '));
+    if(location.pathname.split('/')[3] === 'en'){
+      setSearchWord('');
+    }
   }, [location.pathname])
 
-  const goHomepage = () => { //로고 클릭 시 라이너 홈페이지로 이동
+  const goHomepage = () => { 
     window.location.href = "https://getliner.com/"
   }
 
@@ -39,7 +40,7 @@ const Header = ({ location }) => {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logoBox}>
-          <img className={styles.logo} src="../../../images/Logo/liner-logo.svg" alt="linerLogo" 
+          <img className={styles.logo} src="/images/Logo/liner-logo.svg" alt="linerLogo" 
           onClick={goHomepage}
           />
         </div>
@@ -49,7 +50,7 @@ const Header = ({ location }) => {
           onChange={handleSearchWord}
           onKeyPress={handleKeyPress}
           />
-          <img className={styles.searchBtn} src="../../../images/Button/search-finder-btn.svg" alt="searchBtn"
+          <img className={styles.searchBtn} src="/images/Button/search-finder-btn.svg" alt="searchBtn"
           onClick={handleSearch}
           />
         </div>

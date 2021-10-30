@@ -7,6 +7,7 @@
 
 .title {
   margin: 1rem 0;
+  color: #222222;
 }
 .urlContainer {
   display: flex;
@@ -31,10 +32,14 @@
 
 .highlight {
   display: flex;
+  align-items: center;
   color: #8b8f97;
   margin-top: 2rem;
   font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
+}
+.highlight img {
+  margin-right: 0.3rem;
 }
 
 .phrases {
@@ -46,6 +51,7 @@
   border-left: 4px solid #85d6d4;
   padding-left: 0.8rem;
   margin-bottom: 1.2rem;
+  line-height: 150%;
 }
 .phraseHighlight {
   display: flex;
@@ -88,4 +94,5 @@
 
 .metaData p {
   color: #575757;
+  line-height: 150%;
 }

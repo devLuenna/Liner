@@ -7,22 +7,23 @@ const DetailContents = ({ item, itemUrl }) => {
     window.open("about:blank").location.href = itemUrl;
   };
 
- 
   return ( 
     <section className={styles.container}>
-      <img className={styles.img} src={item.image_url || null} alt="img_url"/> 
+      {item.image_url 
+      ? <img className={styles.img} src={item.image_url} alt="img_url"/> 
+      : null}
       <h2 className={styles.title}>{item.title}</h2>
       <div className={styles.urlContainer}>
-        <img src={item.favicon_url || "../../../images/Favicon/default-favicon.svg"} alt="urlFavicon" onClick={goURLPage}/>
-        <a href={itemUrl} target='_blank'>{itemUrl.origin}</a>
+        <img src={item.favicon_url || "/images/Favicon/default-favicon.svg"} alt="urlFavicon" onClick={goURLPage}/>
+        <a href={itemUrl} target='_blank'>{itemUrl.hostname}</a>
       </div>
       <div className={styles.highlight}>
-        <img src="../../../images/Highlight/bling.svg" alt="bling"/>
+        <img src="/images/Highlight/bling.svg" alt="bling"/>
         <h4>Popular Highlights</h4>
       </div>
       <ul className={styles.phrases}>
         {item.phrases.map(el => 
-        <li className={styles.phrase}>{el.text}</li>
+        <li key={el} className={styles.phrase}>{el.text}</li>
         )}
       </ul>
       <div className={styles.viewOriginal} onClick={goURLPage}>View Original</div>

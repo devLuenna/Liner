@@ -40,7 +40,7 @@ export async function getRecommendedItems(phrase, url, title) {
   }
 }
 
-export async function getRecommendedWordsDetail(id) {
+export async function getPeopleAlsoSearchedForInDetail(id) {
   try {
     const res = await axios({
       method: 'get',
@@ -49,6 +49,26 @@ export async function getRecommendedWordsDetail(id) {
       params: {
         size: 12,
         document_id: id
+      }
+    })
+
+    return res.data.items;
+
+  } catch (err) {
+    return console.log(err);
+  }
+}
+
+export async function getPeopleAlsoRead(id) {
+  try {
+    const res = await axios({
+      method: 'get',
+      url: 'https://lks.getliner.com/recommendation/document',
+      headers: { Authorization: 'Bearer null' },
+      params: {
+        size: 20,
+        document_id: id,
+        anchor: null
       }
     })
 

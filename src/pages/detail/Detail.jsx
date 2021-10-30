@@ -18,6 +18,7 @@ const Detail = ({ location }) => {
     async function getAxiosData(){
       const itemInfo = await getItemInfo(documentId);
       const url = new URL(itemInfo.url);
+      console.log(itemInfo)
       setItem(itemInfo);
       setItemUrl(url);
     }
@@ -49,7 +50,7 @@ const Detail = ({ location }) => {
         <h3 className={styles.moreSectionTitle}>More Like This</h3>
         <ul className={styles.recommendedItems}>
           {recommendedItems.map(el => 
-            <ContentInList item={el}/>
+            <ContentInList key={el.id} item={el}/>
           )}
         </ul>
       </section>

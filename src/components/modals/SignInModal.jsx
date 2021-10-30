@@ -12,25 +12,25 @@ const SignInModal = () => {
         <div className={styles.header}>
           <h3 className={styles.title}>Sign In</h3>
           <img className={styles.closeBtn} 
-          src="../../../images/Button/close-btn.svg"
+          src="/images/Button/close-btn.svg"
           alt="closeBtn"
           onClick={()=>modalInfo.setSignInModal(false)}/>
         </div>
         <div className={styles.authSection}>
           <div className={styles.authBtn}>
-            <img src="../../../images/Auth/google-auth-logo.svg" alt="authLogo"/>
+            <img src="/images/Auth/google-auth-logo.svg" alt="authLogo"/>
             <span className={styles.authText}>Sign in with Google</span>
           </div>
           <div className={styles.authBtn}>
-            <img src="../../../images/Auth/facebook-auth-logo.svg" alt="authLogo"/>
+            <img src="/images/Auth/facebook-auth-logo.svg" alt="authLogo"/>
             <span className={styles.authText}>Sign in with Facebook</span>
           </div>
           <div className={styles.authBtn}>
-            <img src="../../../images/Auth/apple-auth-logo.svg" alt="authLogo"/>
+            <img src="/images/Auth/apple-auth-logo.svg" alt="authLogo"/>
             <span className={styles.authText}>Sign in with Apple</span>
           </div>
           <div className={styles.authBtn}>
-            <img src="../../../images/Auth/twitter-auth-logo.svg" alt="authLogo"/>
+            <img src="/images/Auth/twitter-auth-logo.svg" alt="authLogo"/>
             <span className={styles.authText}>Sign in with Twitter</span>
           </div>
         </div>

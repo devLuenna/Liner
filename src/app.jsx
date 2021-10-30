@@ -19,19 +19,19 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/trusted-search/en/:keyword">
-          <body className={styles.container}>
+          <div className={styles.container}>
             <List />
             <SearchSideBar />
-          </body>
+          </div>
         </Route>
         <Route path="/trusted-search/highlight/en/:id/:title">
-          <body className={styles.container}>
+          <div className={styles.container}>
             <Detail />
             <section>
               <SearchSideBar />
               <ReadSideBar />  
             </section>
-          </body>
+          </div>
         </Route>
       </Switch>
       {modalInfo.signInModal ? <SignInModal/> : null}

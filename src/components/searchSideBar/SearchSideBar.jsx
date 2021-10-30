@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, withRouter } from 'react-router-dom';
-import { getRecommendedWordsDetail } from '../../api/detailApi';
-import { getRecommendedWordsList } from '../../api/listApi';
+import { getPeopleAlsoSearchedForInDetail } from '../../api/detailApi';
+import { getPeopleAlsoSearchedForInList } from '../../api/listApi';
 import styles from './SearchSideBar.module.css';
 
 const SearchSideBar = ({ location }) => {
@@ -17,10 +17,9 @@ const SearchSideBar = ({ location }) => {
     async function getAxiosData(){
       let recommendedData;
       if(location.pathname.split('/').length === 4){
-        recommendedData = await getRecommendedWordsList(keyword);
+        recommendedData = await getPeopleAlsoSearchedForInList(keyword);
       } else{
-        recommendedData = await getRecommendedWordsDetail(location.pathname.split('/')[4]);
-        console.log(recommendedData);
+        recommendedData = await getPeopleAlsoSearchedForInDetail(location.pathname.split('/')[4]);
       }
       setRecommendeds(recommendedData);
     }
@@ -44,7 +43,7 @@ const SearchSideBar = ({ location }) => {
       <h3 className={styles.sectionTitle}>People Also Searched For</h3>
       <div className={styles.sectionContent}>
         {recommendeds.map(el => 
-        <span className={styles.tag} onClick={() => handleSearch(el)}>#{el}</span>
+        <span key={el} className={styles.tag} onClick={() => handleSearch(el)}>#{el}</span>
         )}
       </div>
     </section>

@@ -23,7 +23,7 @@ export async function getSearchedItems(keyword) {
   }
 }
 
-export async function getRecommendedWordsList(keyword) {
+export async function getPeopleAlsoSearchedForInList(keyword) {
   try {
     const res = await axios({
       method: 'get',

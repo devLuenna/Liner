@@ -1,3 +1,13 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.backIcon {
+  cursor: pointer;
+}
 .icons {
   display: flex;
   align-items: center;
@@ -6,6 +16,7 @@
 .iconContainer {
   position: relative;
 }
+
 .bookmarkIcon,
 .shareIcon {
   cursor: pointer;
