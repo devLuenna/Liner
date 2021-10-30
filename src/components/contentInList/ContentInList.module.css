@@ -1,17 +1,18 @@
 .container {
   font-family: "Roboto", sans-serif;
   width: 712px;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 1.5rem 1.2rem 1.5rem 0;
   border-bottom: 1px solid #eff0f1;
 }
 
 .dataAndImg {
   display: flex;
+  justify-content: space-between;
 }
 
 .metaData {
   margin-right: 0.5rem;
+  width: 560px;
 }
 
 .title {
@@ -23,6 +24,16 @@
 .content {
   color: rgb(123, 125, 130);
   font-size: 0.9rem;
+}
+.thumbnail {
+  width: 6rem;
+  height: 6rem;
+}
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 .urlSection {
@@ -36,6 +47,10 @@
   align-items: center;
 }
 
+.urlContainer img {
+  cursor: pointer;
+  width: 1.3rem;
+}
 .urlContainer a {
   cursor: pointer;
   color: inherit;
@@ -44,7 +59,40 @@
   margin-left: 0.7rem;
   color: rgb(126, 126, 126);
 }
-.icons img {
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.bookmarkContainer {
+  position: relative;
+}
+.bookmarkIcon,
+.shareIcon {
   cursor: pointer;
-  margin-left: 0.5rem;
+  padding: 0.25rem;
+}
+
+.bookmarkIcon:hover,
+.shareIcon:hover {
+  background-color: rgb(245, 245, 245);
+  border-radius: 50%;
+}
+
+.toolTip {
+  position: absolute;
+  color: white;
+  border-radius: 2px;
+  background-color: #4a4c52;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 0.15rem 0.35rem;
+  font-size: 0.7rem;
+  visibility: hidden;
+}
+.bookmarkContainer:hover .toolTip {
+  visibility: visible;
+  z-index: 10;
 }

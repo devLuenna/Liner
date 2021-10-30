@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import styles from './MainHeader.module.css';
 
-const Header = ({ search }) => {
+const Header = (props) => {
 
   const [searchWord, setSearchWord] = useState('');
 
@@ -23,7 +23,6 @@ const Header = ({ search }) => {
   }
 
   const handleSearch = () => {
-    search(searchWord);
     let encoded = encodeURI(searchWord);
     encoded = encoded.replace(/%20/gi, '-');
     history.push(`/trusted-search/en/${encoded}`);
