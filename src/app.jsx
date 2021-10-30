@@ -5,6 +5,7 @@ import Header from './components/mainHeader/MainHeader';
 import SignInModal from './components/modals/SignInModal';
 import SignUpModal from './components/modals/SignUpModal';
 import ReadSideBar from './components/readSideBar/ReadSideBar';
+import ScrollTop from './components/scrollTop/ScrollTop';
 import SearchSideBar from './components/searchSideBar/SearchSideBar';
 import { ModalInfoContextStore } from './contexts/ModalContext';
 import Detail from './pages/detail/Detail';
@@ -15,7 +16,7 @@ function App() {
   const modalInfo = useContext(ModalInfoContextStore);
 
   return (
-    <>
+    <ScrollTop>
       <Header />
       <Switch>
         <Route exact path="/trusted-search/en/:keyword">
@@ -36,7 +37,7 @@ function App() {
       </Switch>
       {modalInfo.signInModal ? <SignInModal/> : null}
       {modalInfo.signUpModal ? <SignUpModal/> : null}
-    </>
+    </ScrollTop>
   );
 }
 

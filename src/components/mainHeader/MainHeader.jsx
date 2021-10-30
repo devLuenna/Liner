@@ -10,9 +10,10 @@ const Header = ({ location }) => {
   const modalInfo = useContext(ModalInfoContextStore);
 
   useEffect(()=> {
-    setSearchWord(location.pathname.split('/')[3].replace(/-/gi, ' '));
-    if(location.pathname.split('/')[3] === 'en'){
+    if(location.pathname === '/' || location.pathname.split('/')[3] === 'en'){
       setSearchWord('');
+    }else{
+      setSearchWord(location.pathname.split('/')[3].replace(/-/gi, ' '));
     }
   }, [location.pathname])
 

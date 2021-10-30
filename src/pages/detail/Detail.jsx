@@ -30,8 +30,12 @@ const Detail = ({ location }) => {
 
   useEffect(() => { //추천 문서 배열 받아오기
     async function getAxiosData(){
-      const itemInfo = await getItemInfo(documentId);
-      const recommendeds = await getRecommendedItems(itemInfo.phrases[0].text || itemInfo.title, itemInfo.url, itemInfo.title);
+      let itemInfo = await getItemInfo(documentId);
+      let text = itemInfo.title;
+      if(itemInfo.phrases[0]){
+        text = itemInfo.phrases[0].text;
+      }
+      let recommendeds = await getRecommendedItems(text, itemInfo.url, itemInfo.title);
       setRecommendedItems(recommendeds);
     }
     getAxiosData();
