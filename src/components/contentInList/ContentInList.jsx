@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ModalInfoContextStore } from '../../contexts/ModalContext';
 import styles from './ContentInList.module.css';
 
 const ContentInList = ({ item }) => {
+
+  const modalInfo = useContext(ModalInfoContextStore);
 
   const url = new URL(item.url);
   const urlHost = url.origin;
@@ -27,11 +30,16 @@ const ContentInList = ({ item }) => {
           <a href={url} target='_blank'>{urlHost}</a>
         </div>
         <div className={styles.icons}>
-          <div className={styles.bookmarkContainer}>
-            <img className={styles.bookmarkIcon} src="../../../images/Button/bookmark-btn.svg" alt="bookmarkIcon"/>
+          <div className={styles.iconContainer}>
+            <img className={styles.bookmarkIcon} src="../../../images/Button/bookmark-btn.svg" alt="bookmarkIcon"
+            onClick={() => modalInfo.setSignUpModal(true)}/>
             <span className={styles.toolTip}>Save</span>
           </div>
-          <img className={styles.shareIcon} src="../../../images/Button/share-btn.svg" alt="saveIcon"/>
+          <div className={styles.iconContainer}>
+            <img className={styles.shareIcon} src="../../../images/Button/share-btn.svg" alt="saveIcon"
+            onClick={() => modalInfo.setSignUpModal(true)}/>
+            <span className={styles.toolTip}>Share</span>
+          </div>
         </div>
       </div>
     </li>

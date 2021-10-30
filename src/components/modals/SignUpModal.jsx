@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ModalInfoContextStore } from '../../contexts/ModalContext';
 import styles from './SignModal.module.css';
 
-const SignUpModal = (props) => {
+const SignUpModal = () => {
   
+  const modalInfo = useContext(ModalInfoContextStore);
+
   return (
     <section className={styles.modalContainer}>
       <div className={styles.signUpModalWrap}>
@@ -12,7 +15,8 @@ const SignUpModal = (props) => {
           </h3>
           <img className={styles.closeBtn} 
           src="../../../images/Button/close-btn.svg"
-          alt="closeBtn"/>
+          alt="closeBtn"
+          onClick={() => modalInfo.setSignUpModal(false)}/>
         </div>
         <div className={styles.authSection}>
           <div className={styles.authBtn}>

@@ -65,7 +65,7 @@
   align-items: center;
 }
 
-.bookmarkContainer {
+.iconContainer {
   position: relative;
 }
 .bookmarkIcon,
@@ -92,7 +92,7 @@
   font-size: 0.7rem;
   visibility: hidden;
 }
-.bookmarkContainer:hover .toolTip {
+.iconContainer:hover .toolTip {
   visibility: visible;
   z-index: 10;
 }

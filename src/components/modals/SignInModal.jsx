@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ModalInfoContextStore } from '../../contexts/ModalContext';
 import styles from './SignModal.module.css';
 
-const SignInModal = (props) => {
+const SignInModal = () => {
   
+  const modalInfo = useContext(ModalInfoContextStore);
+
   return (
     <section className={styles.modalContainer}>
       <div className={styles.modalWrap}>
         <div className={styles.header}>
-          <h3 className={styles.title}>Sign In
-            {/* <br></br>to get the best results */}
-          </h3>
+          <h3 className={styles.title}>Sign In</h3>
           <img className={styles.closeBtn} 
           src="../../../images/Button/close-btn.svg"
-          alt="closeBtn"/>
+          alt="closeBtn"
+          onClick={()=>modalInfo.setSignInModal(false)}/>
         </div>
         <div className={styles.authSection}>
           <div className={styles.authBtn}>

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, withRouter } from 'react-router-dom';
+import { ModalInfoContextStore } from '../../contexts/ModalContext';
 import styles from './MainHeader.module.css';
 
 const Header = ({ location }) => {
@@ -8,6 +9,7 @@ const Header = ({ location }) => {
   const [searchWord, setSearchWord] = useState(
     location.pathname.substring(19).replace(/-/gi, ' ')
   );
+  const modalInfo = useContext(ModalInfoContextStore);
 
   useEffect(()=> {
     setSearchWord(location.pathname.substring(19).replace(/-/gi, ' '));
@@ -52,8 +54,8 @@ const Header = ({ location }) => {
           />
         </div>
         <div className={styles.btns}>
-          <span className={styles.signInBtn}>Sign In</span>
-          <span className={styles.signUpBtn}>Sign Up</span>
+          <span className={styles.signInBtn} onClick={() => modalInfo.setSignInModal(true)}>Sign In</span>
+          <span className={styles.signUpBtn} onClick={() => modalInfo.setSignUpModal(true)}>Sign Up</span>
         </div>
       </div>
     </header>
