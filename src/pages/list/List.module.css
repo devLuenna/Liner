@@ -1,7 +1,7 @@
 .container {
-  width: 719px;
+  width: 685px;
   margin: 0 auto;
-  margin-left: 224px;
+  margin-left: 236px;
 }
 
 .listHeader {
@@ -20,6 +20,7 @@
 }
 
 .itemsList {
+  width: 100%;
   margin-top: 1.8rem;
   padding-bottom: 3rem;
 }
@@ -32,4 +33,33 @@
   width: 3rem;
   padding-top: 0.5rem;
   padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 1360px) {
+  .container {
+    width: 625px;
+    margin: 0;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    /* margin-left: 40px; */
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .listHeader {
+    padding: 0 1.5rem;
+  }
+  .resultMsg {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+  .resultDetail {
+    font-size: 0.8rem;
+  }
 }

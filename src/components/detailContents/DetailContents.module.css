@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgb(223, 223, 223);
+  border-bottom: 1px solid #eff0f1;
 }
 
 .urlContainer img {
@@ -95,4 +95,27 @@
 .metaData p {
   color: #575757;
   line-height: 150%;
+}
+
+@media screen and (max-width: 719px) {
+  .img {
+    height: 10rem;
+    border-radius: 0;
+  }
+  .title,
+  .urlContainer,
+  .highlight,
+  .phrases,
+  .viewOriginal,
+  .metaDatas {
+    padding: 0 1.5rem;
+  }
+
+  .urlContainer {
+    padding-bottom: 1rem;
+  }
+  .viewOriginal {
+    margin: 2.2rem 1.5rem;
+    padding: 0.9rem 1.5rem;
+  }
 }

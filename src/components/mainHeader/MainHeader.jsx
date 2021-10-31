@@ -45,6 +45,9 @@ const Header = ({ location }) => {
           <img className={styles.logo} src="/images/Logo/liner-logo.svg" alt="linerLogo" 
           onClick={goHomepage}
           />
+          <img className={styles.mobilelogo} src="/images/Logo/liner-logo-mobile.jpeg" alt="linerLogo" 
+          onClick={goHomepage}
+          />
         </div>
         <div className={styles.inputBox}>
           <input className={styles.inputSearch} type="text" placeholder="Search on LINER"

@@ -37,11 +37,19 @@
   bottom: 100%;
   left: 50%;
   transform: translate(-50%, 0);
-  padding: 0.15rem 0.35rem;
+  padding: 0.2rem 0.35rem;
   font-size: 0.7rem;
   visibility: hidden;
 }
+
 .iconContainer:hover .toolTip {
   visibility: visible;
   z-index: 10;
+}
+
+@media screen and (max-width: 719px) {
+  .container {
+    padding: 0 1.5rem;
+    display: none;
+  }
 }

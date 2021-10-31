@@ -14,9 +14,12 @@
 .container {
   display: flex;
   align-items: center;
+  margin: 0 auto;
 }
 
 .logoBox {
+  display: flex;
+  align-items: center;
   position: absolute;
   left: 0;
 }
@@ -24,11 +27,16 @@
   cursor: pointer;
 }
 
+.mobilelogo {
+  display: none;
+}
+
 .inputBox {
   position: absolute;
-  left: 224px;
-  width: 712px;
+  left: 205px;
+  width: 685px;
   height: 2.5rem;
+  margin: 0 2rem;
   display: flex;
   justify-content: space-between;
   background-color: rgb(237, 241, 244);
@@ -57,7 +65,7 @@
 .searchBtn {
   cursor: pointer;
   padding: 0.5rem;
-  margin-right: 0.4rem;
+  margin-right: 0.3rem;
 }
 
 .btns {
@@ -72,7 +80,7 @@
   cursor: pointer;
   border-radius: 8px;
   color: rgb(51, 202, 197);
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.2rem;
 }
 
 .signUpBtn {
@@ -80,5 +88,63 @@
   border-radius: 8px;
   color: white;
   background-color: rgb(51, 202, 197);
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.2rem;
+}
+
+@media screen and (max-width: 1360px) {
+  .header {
+    width: 944px;
+  }
+  .logoBox {
+    left: 0px;
+  }
+  .logo {
+    display: none;
+  }
+
+  .mobilelogo {
+    all: unset;
+    width: 2.1rem;
+  }
+
+  .inputBox {
+    position: relative;
+    left: -138px;
+    width: 525px;
+  }
+  .btns {
+    right: 0px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    width: 624px;
+  }
+  .logoBox {
+    left: 0px;
+  }
+
+  .inputBox {
+    display: none;
+  }
+
+  .btns {
+    right: 0px;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .header {
+    width: 100%;
+    margin: 0;
+    padding: 0 1.5rem;
+  }
+  .logoBox {
+    left: 1.5rem;
+  }
+
+  .btns {
+    right: 1.5rem;
+  }
 }

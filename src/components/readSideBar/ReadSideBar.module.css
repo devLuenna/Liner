@@ -62,3 +62,16 @@
 .loading {
   padding: 5rem;
 }
+
+@media screen and (max-width: 1360px) {
+  .container {
+    width: 280px;
+    margin-left: 38px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: none;
+  }
+}

@@ -1,5 +1,5 @@
 .container {
-  width: 712px;
+  width: 100%;
   padding: 1.5rem 0;
   border-bottom: 1px solid #eff0f1;
 }
@@ -27,7 +27,9 @@
 .content {
   color: #555555;
   font-size: 0.9rem;
+  line-height: 140%;
 }
+
 .thumbnail {
   width: 6rem;
   height: 6rem;
@@ -95,11 +97,50 @@
   bottom: 100%;
   left: 50%;
   transform: translate(-50%, 0);
-  padding: 0.15rem 0.35rem;
+  padding: 0.2rem 0.35rem;
   font-size: 0.7rem;
   visibility: hidden;
 }
 .iconContainer:hover .toolTip {
   visibility: visible;
   z-index: 10;
+}
+
+@media screen and (max-width: 1360px) {
+  .container {
+    padding: 1rem 0;
+  }
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .metaData {
+    width: 504px;
+  }
+  .urlSection {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 1rem 0 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .container {
+    padding: 1.5rem 1.5rem;
+  }
+  .title {
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+  }
+  .metaData {
+    width: 85%;
+  }
+  .thumbnail {
+    width: 4rem;
+    height: 4rem;
+  }
 }
