@@ -54,7 +54,7 @@ const Detail = ({ location }) => {
         <h3 className={styles.moreSectionTitle}>More Like This</h3>
         <ul className={styles.recommendedItems}>
           {recommendedItems.map(el => 
-            <ContentInList key={el.id} item={el}/>
+            <ContentInList key={el.document_id} item={el}/>
           )}
         </ul>
       </section>

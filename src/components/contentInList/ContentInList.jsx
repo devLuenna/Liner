@@ -7,6 +7,11 @@ const ContentInList = ({ item }) => {
 
   const history = useHistory();
   const modalInfo = useContext(ModalInfoContextStore);
+  
+  const imgArr = [];
+  for(let i=0; i<6; i++){
+    imgArr.push(`/images/Thumbnail/default-thumb-${i}.svg`)
+  };
 
   const url = new URL(item.url);
   const urlHost = url.hostname;
@@ -29,7 +34,7 @@ const ContentInList = ({ item }) => {
           <p className={styles.content}>{item.description}</p>
         </div>
         <div className={styles.thumbnail}>
-          <img src={item.image_url || "/images/Thumbnail/default-thumb-1.svg"} alt="thumbnail"
+          <img src={item.image_url || imgArr[Math.floor(Math.random()*6)]} alt="thumbnail"
           onClick={goDetailPage}/>
         </div>
       </div>

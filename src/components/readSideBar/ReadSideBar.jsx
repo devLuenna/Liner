@@ -43,7 +43,7 @@ const ReadSideBar = ({ location }) => {
       <h3 className={styles.sectionTitle}>People Also Read</h3>
       <ul className={styles.sectionContent}>
         {recommendeds.map(el => 
-          <li className={styles.item} onClick={() => goDetailPage(el)}>
+          <li key={el.document_id} className={styles.item} onClick={() => goDetailPage(el)}>
             <h3 className={styles.title}>{el.title}</h3>
             <a href={el.url} className={styles.url}>{new URL(el.url).hostname}</a>
           </li>
