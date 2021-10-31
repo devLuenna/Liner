@@ -15,7 +15,7 @@ const DetailContents = ({ item, itemUrl }) => {
       <h2 className={styles.title}>{item.title}</h2>
       <div className={styles.urlContainer}>
         <img src={item.favicon_url || "/images/Favicon/default-favicon.svg"} alt="urlFavicon" onClick={goURLPage}/>
-        <a href={itemUrl} target='_blank'>{itemUrl.hostname}</a>
+        <a href={itemUrl} target='_sub'>{itemUrl.hostname}</a>
       </div>
       <div className={styles.highlight}>
         <img src="/images/Highlight/bling.svg" alt="bling"/>

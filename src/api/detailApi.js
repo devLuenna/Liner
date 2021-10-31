@@ -15,7 +15,7 @@ export async function getItemInfo(id) {
   }
 }
 
-export async function getRecommendedItems(phrase, url, title) {
+export async function getRecommendedItems(anchor, phrase, url, title) {
   try {
     const res = await axios({
       method: 'post',
@@ -23,7 +23,7 @@ export async function getRecommendedItems(phrase, url, title) {
       headers: { Authorization: 'Bearer null' },
       params: {
         size: 12,
-        anchor: null
+        anchor: anchor
       },
       data: {
         phrase: phrase,
@@ -32,8 +32,8 @@ export async function getRecommendedItems(phrase, url, title) {
         num_of_phrase: 7
       }
     })
-
-    return res.data.items;
+    
+    return res.data;
 
   } catch (err) {
     return console.log(err);

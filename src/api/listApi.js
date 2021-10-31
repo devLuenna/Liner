@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export async function getSearchedItems(keyword) {
+export async function getSearchedItems(keyword, anchor) {
   try {
     const res = await axios({
       method: 'post',
@@ -8,14 +8,14 @@ export async function getSearchedItems(keyword) {
       headers: { Authorization: 'Bearer null' },
       params: {
         size: 20,
-        anchor: null
+        anchor: anchor
       },
       data: {
         query: keyword,
         num_of_phrase: 7
       }
     })
-
+    //console.log(res.data)
     return res.data;
 
   } catch (err) {
@@ -34,7 +34,6 @@ export async function getPeopleAlsoSearchedForInList(keyword) {
         keyword: keyword
       }
     })
-
     return res.data.items;
 
   } catch (err) {

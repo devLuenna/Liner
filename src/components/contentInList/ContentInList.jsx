@@ -41,7 +41,7 @@ const ContentInList = ({ item }) => {
       <div className={styles.urlSection}>
         <div className={styles.urlContainer}>
           <img src={item.favicon_url || "/images/Favicon/default-favicon.svg"} alt="urlFavicon" onClick={goURLPage}/>
-          <a href={url} target='_blank'>{urlHost}</a>
+          <a href={url} target='_sub'>{urlHost}</a>
         </div>
         <div className={styles.icons}>
           <div className={styles.iconContainer}>

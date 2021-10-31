@@ -2,7 +2,6 @@
   width: 719px;
   margin: 0 auto;
   margin-left: 224px;
-  overflow-y: scroll;
 }
 
 .listHeader {
@@ -22,5 +21,15 @@
 
 .itemsList {
   margin-top: 1.8rem;
-  list-style: none;
+  padding-bottom: 3rem;
+}
+
+.loadingBox {
+  display: flex;
+  justify-content: center;
+}
+.loading {
+  width: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 5rem;
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import styles from './App.module.css';
 import Header from './components/mainHeader/MainHeader';

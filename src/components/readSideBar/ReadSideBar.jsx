@@ -13,7 +13,7 @@ const ReadSideBar = ({ location }) => {
   useEffect(() => {
     async function getAxiosData(){
       const recommendedData = await getPeopleAlsoRead(location.pathname.split('/')[4]);
-      console.log(recommendedData);
+      //console.log(recommendedData);
       setRecommendeds(recommendedData.slice(0, 7));
     }
     getAxiosData();
