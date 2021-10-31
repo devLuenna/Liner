@@ -134,7 +134,7 @@
   }
   .title {
     font-size: 1.05rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
   }
   .metaData {
     width: 85%;
@@ -142,5 +142,23 @@
   .thumbnail {
     width: 4rem;
     height: 4rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .metaData {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .metaData {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .metaData {
+    width: 70%;
   }
 }

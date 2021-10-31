@@ -39,7 +39,7 @@ const ReadSideBar = ({ location }) => {
       }
     }
   }
-  
+
   const goDetailPage = (el) => {
     let encodedTitle = encodeURI(el.title);
     encodedTitle = encodedTitle.replace(/%20/gi, '-');
@@ -61,9 +61,9 @@ const ReadSideBar = ({ location }) => {
       <h3 className={styles.sectionTitle}>People Also Read</h3>
       <ul className={styles.sectionContent}>
         {recommendeds.map(el => 
-          <li key={el.document_id} className={styles.item} onClick={() => goDetailPage(el)}>
-            <h3 className={styles.title}>{el.title}</h3>
-            <a href={el.url} className={styles.url}>{new URL(el.url).hostname}</a>
+          <li key={el.document_id} className={styles.item}>
+            <h3 className={styles.title} onClick={() => goDetailPage(el)}>{el.title}</h3>
+            <a href={el.url} target='_sub' className={styles.url}>{new URL(el.url).hostname}</a>
           </li>
         )}
       </ul>

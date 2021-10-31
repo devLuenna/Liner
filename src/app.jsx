@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import styles from './App.module.css';
 import Header from './components/mainHeader/MainHeader';
 import Dimmed from './components/modals/Dimmed';
@@ -20,7 +20,10 @@ function App() {
     <ScrollTop>
       <Header />
       <Switch>
-        <Route exact path="/trusted-search/en/:keyword">
+        <Route exact path="/">
+          <Redirect to path="/trusted-search/en/:keyword" />
+        </Route>
+        <Route path="/trusted-search/en/:keyword">
           <div className={styles.container}>
             <List />
             <SearchSideBar />

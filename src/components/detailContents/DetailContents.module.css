@@ -51,7 +51,7 @@
   border-left: 4px solid #85d6d4;
   padding-left: 0.8rem;
   margin-bottom: 1.2rem;
-  line-height: 150%;
+  line-height: 130%;
 }
 .phraseHighlight {
   display: flex;
@@ -94,7 +94,7 @@
 
 .metaData p {
   color: #575757;
-  line-height: 150%;
+  line-height: 140%;
 }
 
 @media screen and (max-width: 719px) {

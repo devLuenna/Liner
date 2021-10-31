@@ -40,12 +40,10 @@ const Detail = ({ location }) => {
     let recommendeds = await getRecommendedItems(anchor, text, item.url, item.title);
     if(recommendeds.items.length !== 0){
       setScrollLoading(true);
-      //setTimeout(()=> {
-        setRecommendedItems(recommendedItems.concat(recommendeds.items));
-        setAnchor(recommendeds.anchor);
-        setScrollLoading(false);
-      //}, 200)
-    }
+      setRecommendedItems(recommendedItems.concat(recommendeds.items));
+      setAnchor(recommendeds.anchor);
+      setScrollLoading(false);
+  }
   }
 
   const _infiniteScroll = useCallback(()=> { //스크롤 높이 및 정도 감지하여, 조건 만족하면 fetchMoreData함수 호출

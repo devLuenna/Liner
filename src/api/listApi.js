@@ -15,7 +15,7 @@ export async function getSearchedItems(keyword, anchor) {
         num_of_phrase: 7
       }
     })
-    //console.log(res.data)
+    
     return res.data;
 
   } catch (err) {
