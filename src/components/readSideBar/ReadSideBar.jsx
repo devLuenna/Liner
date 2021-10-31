@@ -8,13 +8,16 @@ const ReadSideBar = ({ location }) => {
   const history = useHistory();
   const [loading, setLoading] = useState(true);
   const [recommendeds, setRecommendeds] = useState([]);
+  const [restData, setRestData] = useState([]);
+  const [anchor, setAnchor] = useState(null);
   const [showMoreBtn, setShowMoreBtn] = useState(true);
   
   useEffect(() => {
     async function getAxiosData(){
-      const recommendedData = await getPeopleAlsoRead(location.pathname.split('/')[4]);
-      //console.log(recommendedData);
-      setRecommendeds(recommendedData.slice(0, 7));
+      const recommendedData = await getPeopleAlsoRead(location.pathname.split('/')[4], null);
+      setRecommendeds(recommendedData.items.slice(0, 7));
+      setRestData(recommendedData.items.slice(7));
+      setAnchor(recommendedData.anchor);
     }
     getAxiosData();
     setShowMoreBtn(true);
@@ -23,16 +26,24 @@ const ReadSideBar = ({ location }) => {
     }, 800);
   }, [location.pathname])
 
+  const showMore = async () => {
+    setRecommendeds(recommendeds.concat(restData.slice(0, 5)));
+    setRestData(restData.slice(5));
+    if(restData.length === 0){
+      const recommendedData = await getPeopleAlsoRead(location.pathname.split('/')[4], anchor);
+      setRecommendeds(recommendeds.concat(recommendedData.items.slice(0, 7)));
+      setRestData(recommendedData.items.slice(7));
+      setAnchor(recommendedData.anchor);
+      if(recommendedData.items.slice(7).length === 0){
+        setShowMoreBtn(false);
+      }
+    }
+  }
+  
   const goDetailPage = (el) => {
     let encodedTitle = encodeURI(el.title);
     encodedTitle = encodedTitle.replace(/%20/gi, '-');
     history.push(`/trusted-search/highlight/en/${el.document_id}/${encodedTitle}`);
-  }
-
-  const showMore = async () => {
-    const recommendedData = await getPeopleAlsoRead(location.pathname.split('/')[4]);
-    setRecommendeds(recommendedData.slice(0, 12));
-    setShowMoreBtn(false);
   }
 
   if(loading){

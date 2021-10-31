@@ -59,7 +59,7 @@ export async function getPeopleAlsoSearchedForInDetail(id) {
   }
 }
 
-export async function getPeopleAlsoRead(id) {
+export async function getPeopleAlsoRead(id, anchor) {
   try {
     const res = await axios({
       method: 'get',
@@ -68,11 +68,11 @@ export async function getPeopleAlsoRead(id) {
       params: {
         size: 20,
         document_id: id,
-        anchor: null
+        anchor: anchor
       }
     })
 
-    return res.data.items;
+    return res.data;
 
   } catch (err) {
     return console.log(err);
