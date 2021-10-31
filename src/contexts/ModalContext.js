@@ -6,12 +6,15 @@ export const ModalInfoContextStore = createContext();
 const ModalInfoContext = (props) => {
   const [signInModal, setSignInModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
+  const [dimmedOn, setDimmedOn] = useState(false);
 
   const modalInfo = {
     signInModal,
     signUpModal,
+    dimmedOn,
     setSignInModal, 
-    setSignUpModal
+    setSignUpModal,
+    setDimmedOn
   };
 
   return (

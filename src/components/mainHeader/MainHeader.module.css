@@ -5,6 +5,10 @@
   display: flex;
   align-items: center;
   position: relative;
+  background-color: white;
+  z-index: 10;
+  position: sticky;
+  top: 0;
 }
 
 .container {
@@ -40,6 +44,14 @@
   border-radius: 8px;
   padding: 0 1rem;
   font-size: 1rem;
+}
+
+.inputSearch:focus {
+  outline: none;
+}
+
+.inputSearch::placeholder {
+  color: #b6b8bc;
 }
 
 .searchBtn {

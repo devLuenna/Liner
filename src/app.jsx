@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import styles from './App.module.css';
 import Header from './components/mainHeader/MainHeader';
+import Dimmed from './components/modals/Dimmed';
 import SignInModal from './components/modals/SignInModal';
 import SignUpModal from './components/modals/SignUpModal';
 import ReadSideBar from './components/readSideBar/ReadSideBar';
@@ -35,8 +36,9 @@ function App() {
           </div>
         </Route>
       </Switch>
-      {modalInfo.signInModal ? <SignInModal/> : null}
-      {modalInfo.signUpModal ? <SignUpModal/> : null}
+      {modalInfo.signInModal ? <SignInModal /> : null}
+      {modalInfo.signUpModal ? <SignUpModal /> : null}
+      {modalInfo.dimmedOn ? <Dimmed /> : null}
     </ScrollTop>
   );
 }

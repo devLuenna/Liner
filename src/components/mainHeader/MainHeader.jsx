@@ -35,6 +35,7 @@ const Header = ({ location }) => {
     let encoded = encodeURI(searchWord);
     encoded = encoded.replace(/%20/gi, '-');
     history.push(`/trusted-search/en/${encoded}`);
+    modalInfo.setDimmedOn(false);
   }
   
   return (
@@ -48,6 +49,7 @@ const Header = ({ location }) => {
         <div className={styles.inputBox}>
           <input className={styles.inputSearch} type="text" placeholder="Search on LINER"
           value={searchWord}
+          onClick={() => modalInfo.setDimmedOn(true)}
           onChange={handleSearchWord}
           onKeyPress={handleKeyPress}
           />

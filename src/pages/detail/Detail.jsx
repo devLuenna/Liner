@@ -45,7 +45,10 @@ const Detail = ({ location }) => {
   }, [documentId])
 
   if(loading){
-    return null;
+    return (
+      <section className={styles.container}>
+      </section>
+    )
   }else{
     return (
       <section className={styles.container}>

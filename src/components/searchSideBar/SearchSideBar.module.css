@@ -37,3 +37,12 @@
   background-color: #edeff3;
   border-radius: 8px;
 }
+
+.loadingBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading {
+  padding: 4rem;
+}

@@ -36,7 +36,14 @@ const SearchSideBar = ({ location }) => {
   }
 
   if(loading){
-    return null;
+    return (
+      <section className={styles.container}>
+        <h3 className={styles.sectionTitle}>People Also Searched For</h3>
+        <div className={styles.loadingBox}>
+          <img className={styles.loading} src="/images/Loading/loadingSpinner.gif" alt="loading"/>
+        </div>
+      </section>
+      )
   } else{
   return (
     <section className={styles.container}>
