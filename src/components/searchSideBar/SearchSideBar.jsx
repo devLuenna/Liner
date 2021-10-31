@@ -27,7 +27,7 @@ const SearchSideBar = ({ location }) => {
     setTimeout(()=> {
       setLoading(false);
     }, 800);
-  }, [location.pathname, keyword])
+  }, [location.pathname])
 
   const handleSearch = (el) => {
     let encoded = encodeURI(el);
