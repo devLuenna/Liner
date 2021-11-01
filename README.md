@@ -9,18 +9,11 @@
 http://getliner.link/
 
 ## 🛠 사용한 기술 스택
-<<<<<<< HEAD
 
 <img width="350" src="https://user-images.githubusercontent.com/83934037/139624155-84390780-b05e-4f26-a68d-7bc33ac6d1a6.png">
 
 ## 🌳 파일 구조
 
-=======
-<img width="350" src="https://user-images.githubusercontent.com/83934037/139624155-84390780-b05e-4f26-a68d-7bc33ac6d1a6.png">
-
-
-## 🌳 파일 구조
->>>>>>> 73d5ddba656028910239923d0b2cc3401c74fac0
 ```
 📦 src
  ┣ 📂 api
@@ -43,11 +36,7 @@ http://getliner.link/
  ┣ 📜 App.module.css
  ┣ 📜 index.css
  ┗ 📜 index.js
-<<<<<<< HEAD
 ```
-=======
- ```
->>>>>>> 73d5ddba656028910239923d0b2cc3401c74fac0
 
 ## 🏞 구현사항 시연 GIF
 
@@ -95,13 +84,6 @@ http://getliner.link/
     <img width="700" src="https://user-images.githubusercontent.com/83934037/139622171-85e67aea-84c3-40cf-97b8-4519d5e10997.gif"/>
   </details>
 
-<<<<<<< HEAD
 ## 👀 더 자세한 내용은 아래 링크에서 확인
 
-=======
-
-
-
-## 👀 더 자세한 내용은 아래 링크에서 확인
->>>>>>> 73d5ddba656028910239923d0b2cc3401c74fac0
 https://github.com/devjade/Liner/issues
