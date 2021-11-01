@@ -26,6 +26,14 @@ const ContentInList = ({ item }) => {
     history.push(`/trusted-search/highlight/en/${item.document_id}/${encodedTitle}`);
   }
 
+  const handleThumbnailError = (e) => {
+    e.target.src = imgArr[Math.floor(Math.random()*6)];
+  }
+  
+  const handleFaviconError = (e) => {
+    e.target.src = "/images/Favicon/default-favicon.svg";
+  }
+
   return (
     <li className={styles.container}>
       <div className={styles.dataAndImg}>
@@ -35,12 +43,15 @@ const ContentInList = ({ item }) => {
         </div>
         <div className={styles.thumbnail}>
           <img src={item.image_url || imgArr[Math.floor(Math.random()*6)]} alt="thumbnail"
+          onError={handleThumbnailError}
           onClick={goDetailPage}/>
         </div>
       </div>
       <div className={styles.urlSection}>
         <div className={styles.urlContainer}>
-          <img src={item.favicon_url || "/images/Favicon/default-favicon.svg"} alt="urlFavicon" onClick={goURLPage}/>
+          <img src={item.favicon_url || "/images/Favicon/default-favicon.svg"} alt="urlFavicon" 
+          onError={handleFaviconError}
+          onClick={goURLPage}/>
           <a href={url} target='_sub'>{urlHost}</a>
         </div>
         <div className={styles.icons}>

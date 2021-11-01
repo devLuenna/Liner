@@ -7,6 +7,10 @@ const DetailContents = ({ item, itemUrl }) => {
     window.open("about:blank").location.href = itemUrl;
   };
 
+  const handleFaviconError = (e) => {
+    e.target.src = "/images/Favicon/default-favicon.svg";
+  }
+
   return ( 
     <section className={styles.container}>
       {item.image_url 
@@ -14,7 +18,9 @@ const DetailContents = ({ item, itemUrl }) => {
       : null}
       <h2 className={styles.title}>{item.title}</h2>
       <div className={styles.urlContainer}>
-        <img src={item.favicon_url || "/images/Favicon/default-favicon.svg"} alt="urlFavicon" onClick={goURLPage}/>
+        <img src={item.favicon_url || "/images/Favicon/default-favicon.svg"} alt="urlFavicon" 
+        onError={handleFaviconError}
+        onClick={goURLPage}/>
         <a href={itemUrl} target='_sub'>{itemUrl.hostname}</a>
       </div>
       <div className={styles.highlight}>

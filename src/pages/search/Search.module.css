@@ -1,0 +1,50 @@
+.container {
+  width: 620px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.header {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #272a31;
+  margin-bottom: 1.5rem;
+  padding-left: 0.2rem;
+}
+
+.inputBox {
+  margin: 0 auto;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(237, 241, 244);
+  border: none;
+  border-radius: 8px;
+}
+
+.inputSearch {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(237, 241, 244);
+  border: none;
+  border-radius: 8px;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+.inputSearch:focus {
+  outline: none;
+}
+
+.inputSearch::placeholder {
+  color: #b6b8bc;
+}
+
+.searchBtn {
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 0.3rem;
+}

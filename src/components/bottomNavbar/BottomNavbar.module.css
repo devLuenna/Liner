@@ -1,0 +1,60 @@
+.container {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    all: unset;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    padding: 0.4rem 0 0.2rem 0;
+    border-top: 1px solid #eff0f1;
+    background-color: white;
+  }
+
+  .btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .btn {
+    cursor: pointer;
+  }
+
+  .moreBtnBox {
+    position: relative;
+  }
+
+  .moreOpt {
+    position: absolute;
+    left: 1rem;
+    bottom: 2rem;
+    width: 5rem;
+  }
+
+  .signIn,
+  .signUp {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85rem;
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #eff0f1;
+  }
+
+  .signIn {
+    color: rgb(51, 202, 197);
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .signUp {
+    color: white;
+    background-color: rgb(51, 202, 197);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}

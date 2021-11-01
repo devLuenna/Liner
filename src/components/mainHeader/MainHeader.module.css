@@ -120,44 +120,6 @@
 
 @media screen and (max-width: 1024px) {
   .header {
-    width: 624px;
-  }
-  .logoBox {
-    left: 0px;
-  }
-
-  .inputBox {
-    left: -58px;
-    width: 400px;
-  }
-
-  .btns {
-    right: 0px;
-  }
-  .signInBtn {
-    padding: 0.5rem 1rem;
-    /* border: 1px solid gray; */
-  }
-
-  .signUpBtn {
-    padding: 0.5rem 1rem;
-  }
-}
-
-@media screen and (max-width: 719px) {
-  .header {
-    width: 100%;
-    margin: 0;
-    padding: 0 1.5rem;
-  }
-  .logoBox {
-    left: 1.5rem;
-  }
-  .inputBox {
     display: none;
-  }
-
-  .btns {
-    right: 1.5rem;
   }
 }

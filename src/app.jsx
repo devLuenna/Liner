@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import styles from './App.module.css';
+import BottomNavbar from './components/bottomNavbar/BottomNavbar';
 import Header from './components/mainHeader/MainHeader';
 import Dimmed from './components/modals/Dimmed';
 import SignInModal from './components/modals/SignInModal';
@@ -11,6 +12,7 @@ import SearchSideBar from './components/searchSideBar/SearchSideBar';
 import { ModalInfoContextStore } from './contexts/ModalContext';
 import Detail from './pages/detail/Detail';
 import List from './pages/list/List';
+import Search from './pages/search/Search';
 
 function App() {
  
@@ -18,18 +20,21 @@ function App() {
 
   return (
     <ScrollTop>
-      <Header />
       <Switch>
-        <Route exact path="/">
-          <Redirect to path="/trusted-search/en/:keyword" />
+        <Route exact path="/search">
+          <Search />
+          <BottomNavbar />
         </Route>
         <Route path="/trusted-search/en/:keyword">
+          <Header />
           <div className={styles.container}>
             <List />
             <SearchSideBar />
           </div>
+          <BottomNavbar />
         </Route>
         <Route path="/trusted-search/highlight/en/:id/:title">
+          <Header />
           <div className={styles.container}>
             <Detail />
             <section>
@@ -37,6 +42,7 @@ function App() {
               <ReadSideBar />  
             </section>
           </div>
+          <BottomNavbar />
         </Route>
       </Switch>
       {modalInfo.signInModal ? <SignInModal /> : null}

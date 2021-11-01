@@ -50,6 +50,6 @@
 @media screen and (max-width: 719px) {
   .container {
     padding: 0 1.5rem;
-    display: none;
+    /* display: none; */
   }
 }
