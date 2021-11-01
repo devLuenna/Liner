@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router';
+import { ModalInfoContextStore } from '../../contexts/ModalContext';
 import styles from './BottomNavbar.module.css';
 
 const BottomNavbar = (props) => {
 
   const history = useHistory();
   const [moreOpt, setMoreOpt] = useState(false);
+  const modalInfo = useContext(ModalInfoContextStore);
 
   const goHomepage = () => { 
     window.location.href = "https://getliner.com/"
@@ -13,6 +15,15 @@ const BottomNavbar = (props) => {
 
   const goSearchpage = () => { 
     history.push('/search');
+  }
+
+  const handleSignIn = () => {
+    modalInfo.setSignInModal(true);
+    setMoreOpt(false);
+  }
+  const handleSignUp = () => {
+    modalInfo.setSignUpModal(true);
+    setMoreOpt(false);
   }
 
   return (
@@ -31,8 +42,8 @@ const BottomNavbar = (props) => {
           onClick={() => setMoreOpt(!moreOpt)}/>
           {moreOpt ? 
           <div className={styles.moreOpt}>
-            <span className={styles.signIn}>Sign In</span>
-            <span className={styles.signUp}>Sign Up</span>
+            <span className={styles.signIn} onClick={handleSignIn}>Sign In</span>
+            <span className={styles.signUp} onClick={handleSignUp}>Sign Up</span>
           </div> : null}
         </div>
       </div>
