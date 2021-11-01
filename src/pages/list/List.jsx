@@ -15,7 +15,7 @@ const List = ({ location }) => {
   keyword = keyword.replace(/-/gi, ' ');
 
 
-  const fetchMoreData = async () => { //댓글 더 추가로 받아오는 함수
+  const fetchMoreData = async () => { //데이터를 추가로 받아오는 함수
     const searchData = await getSearchedItems(keyword, anchor);
       if(searchData.items.length !== 0){
       setIsLoading(true);

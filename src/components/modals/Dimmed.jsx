@@ -6,7 +6,11 @@ const Dimmed = (props) => {
   
   const modalInfo = useContext(ModalInfoContextStore);
 
-  return <section className={styles.modalContainer} onClick={() => modalInfo.setDimmedOn(false)}></section>
-
+  return (
+    <section 
+      className={styles.modalContainer} 
+      onClick={() => modalInfo.setDimmedOn(false)}>
+    </section>
+  )
 }
 export default Dimmed;
