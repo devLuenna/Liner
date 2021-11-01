@@ -17,7 +17,7 @@ const Search = (props) => {
     }
   }
 
-  const handleSearch = () => {
+  const handleSearch = () => { //검색어 입력 후 디테일 페이지로 이동
     let encoded = encodeURI(searchWord);
     encoded = encoded.replace(/%20/gi, '-');
     history.push(`/trusted-search/en/${encoded}`);

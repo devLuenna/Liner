@@ -14,12 +14,12 @@ const SearchSideBar = ({ location }) => {
   keyword = keyword.replace(/-/gi, ' ');
 
   useEffect(() => {
-    async function getAxiosData(){
+    async function getAxiosData(){ //추천검색어 받아오기
       let recommendedData;
       if(location.pathname.split('/').length === 4){
-        recommendedData = await getPeopleAlsoSearchedForInList(keyword);
+        recommendedData = await getPeopleAlsoSearchedForInList(keyword); //리스트 페이지일 때
       } else{
-        recommendedData = await getPeopleAlsoSearchedForInDetail(location.pathname.split('/')[4]);
+        recommendedData = await getPeopleAlsoSearchedForInDetail(location.pathname.split('/')[4]); //디테일 페이지일 때
       }
       setRecommendeds(recommendedData);
     }
@@ -29,7 +29,7 @@ const SearchSideBar = ({ location }) => {
     }, 800);
   }, [location.pathname])
 
-  const handleSearch = (el) => {
+  const handleSearch = (el) => { //검색어 키워드 클릭 시 디테일 페이지로 이동
     let encoded = encodeURI(el);
     encoded = encoded.replace(/%20/gi, '-');
     history.push(`/trusted-search/en/${encoded}`);

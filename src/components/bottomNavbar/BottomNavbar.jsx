@@ -9,7 +9,7 @@ const BottomNavbar = (props) => {
   const [moreOpt, setMoreOpt] = useState(false);
   const modalInfo = useContext(ModalInfoContextStore);
 
-  const goHomepage = () => { 
+  const goHomepage = () => { //로고 클릭 시 라이너 공홈으로 이동
     window.location.href = "https://getliner.com/"
   }
 

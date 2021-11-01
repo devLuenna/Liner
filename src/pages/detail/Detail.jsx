@@ -16,7 +16,7 @@ const Detail = ({ location }) => {
   const [anchor, setAnchor] = useState(null);
   const [scrollLoading, setScrollLoading] = useState(true); //무한스크롤 시 댓글 로딩
 
-  const documentId = location.pathname.split('/')[4];
+  const documentId = location.pathname.split('/')[4]; //엔드포인트에서 문서 id 값 가져오기
 
   useEffect(() => { //문서 상세 정보 받아오기
     async function getAxiosData(){
@@ -73,7 +73,7 @@ const Detail = ({ location }) => {
   }, [documentId])
 
 
-  useEffect(()=> {
+  useEffect(()=> { 
     window.addEventListener('scroll', _infiniteScroll, true);
     return () => window.removeEventListener('scroll', _infiniteScroll, true); 
   }, [_infiniteScroll])

@@ -10,9 +10,9 @@ const Header = ({ location }) => {
   const modalInfo = useContext(ModalInfoContextStore);
 
   useEffect(()=> {
-    if(location.pathname === '/' || location.pathname.split('/')[3] === 'en'){
+    if(location.pathname === '/' || location.pathname.split('/')[3] === 'en'){ //홈화면 or 디테일 페이지일 때 인풋박스 value 비우기 
       setSearchWord('');
-    }else{
+    }else{ //리스트페이지일 때 엔드포인트에서 인풋박스 value 가져오기
       setSearchWord(location.pathname.split('/')[3].replace(/-/gi, ' '));
     }
   }, [location.pathname])
@@ -32,10 +32,10 @@ const Header = ({ location }) => {
   }
 
   const handleSearch = () => {
-    let encoded = encodeURI(searchWord);
-    encoded = encoded.replace(/%20/gi, '-');
-    history.push(`/trusted-search/en/${encoded}`);
-    modalInfo.setDimmedOn(false);
+    let encoded = encodeURI(searchWord); //검색값 인코딩
+    encoded = encoded.replace(/%20/gi, '-'); //인코딩된 띄어쓰기 값은 하이픈으로 Replace
+    history.push(`/trusted-search/en/${encoded}`); // 리스트페이지로 이동
+    modalInfo.setDimmedOn(false); //검색 완료 후 dimmed off
   }
   
   return (

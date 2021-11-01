@@ -16,21 +16,21 @@ const ContentInList = ({ item }) => {
   const url = new URL(item.url);
   const urlHost = url.hostname;
 
-  const goURLPage = () => { //로고 클릭 시 라이너 홈페이지로 이동
+  const goURLPage = () => { //문서의 원본 웹페이지로 이동
     window.open("about:blank").location.href = url;
   }
 
-  const goDetailPage = () => {
-    let encodedTitle = encodeURI(item.title);
-    encodedTitle = encodedTitle.replace(/%20/gi, '-');
-    history.push(`/trusted-search/highlight/en/${item.document_id}/${encodedTitle}`);
+  const goDetailPage = () => { 
+    let encodedTitle = encodeURI(item.title); //문서의 타이틀 인코딩
+    encodedTitle = encodedTitle.replace(/%20/gi, '-'); //인코딩된 띄어쓰기 값은 하이픈으로 Replace
+    history.push(`/trusted-search/highlight/en/${item.document_id}/${encodedTitle}`); //클릭 시 디테일 페이지로 이동
   }
 
-  const handleThumbnailError = (e) => {
-    e.target.src = imgArr[Math.floor(Math.random()*6)];
+  const handleThumbnailError = (e) => { //유효하지 않은 이미지 주소일 때 엑박뜨는 것 처리
+    e.target.src = imgArr[Math.floor(Math.random()*6)]; //6개의 이미지 src 중에서 랜덤으로 1개 
   }
   
-  const handleFaviconError = (e) => {
+  const handleFaviconError = (e) => { //유효하지 않은 이미지 주소일 때 엑박뜨는 것 처리
     e.target.src = "/images/Favicon/default-favicon.svg";
   }
 

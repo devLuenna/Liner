@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './DetailContents.module.css';
 
 const DetailContents = ({ item, itemUrl }) => {
 
-  const goURLPage = () => { //로고 클릭 시 라이너 홈페이지로 이동
+  const imgRef = useRef();
+
+  const goURLPage = () => { //문서의 원본 웹페이지로 이동
     window.open("about:blank").location.href = itemUrl;
   };
 
-  const handleFaviconError = (e) => {
+  const handleFaviconError = (e) => { //유효하지 않은 이미지 주소일 때 엑박뜨는 것 처리
     e.target.src = "/images/Favicon/default-favicon.svg";
+  }
+
+  const handleImgError = (e) => { //유효하지 않은 이미지 주소일 때 엑박뜨는 것 처리
+    imgRef.current.style = "display: none";
   }
 
   return ( 
     <section className={styles.container}>
       {item.image_url 
-      ? <img className={styles.img} src={item.image_url} alt="img_url"/> 
+      ? <img ref={imgRef} className={styles.img} src={item.image_url} alt="img_url"
+      onError={handleImgError}/> 
       : null}
       <h2 className={styles.title}>{item.title}</h2>
       <div className={styles.urlContainer}>
