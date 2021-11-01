@@ -12,7 +12,7 @@ const List = ({ location }) => {
   const [isLoading, setIsLoading] = useState(true); //무한스크롤 시 댓글 로딩
 
   let keyword = location.pathname.split('/')[3];
-  keyword = keyword.replace(/-/gi, ' ');
+  keyword = keyword.replace(/-/gi, ' '); 
 
 
   const fetchMoreData = async () => { //데이터를 추가로 받아오는 함수
