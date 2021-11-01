@@ -6,7 +6,7 @@
 
 ## 📎 배포 링크
 
-http://getliner.link/
+<a href="http://getliner.link/trusted-search/en/%EB%9D%BC%EC%9D%B4%EB%84%88" target='_blank'>바로가기</a>
 
 ## 🛠 사용한 기술 스택
 
@@ -84,6 +84,6 @@ http://getliner.link/
     <img width="700" src="https://user-images.githubusercontent.com/83934037/139622171-85e67aea-84c3-40cf-97b8-4519d5e10997.gif"/>
   </details>
 
-## 👀 더 자세한 내용은 아래 링크에서 확인
+## 👀 에러핸들링 & 기억하고 싶은 코드
 
 https://github.com/devjade/Liner/issues
