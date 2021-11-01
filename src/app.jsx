@@ -21,7 +21,11 @@ function App() {
   return (
     <ScrollTop>
       <Switch>
-        <Route exact path="/search">
+        <Route exact path="/">
+          <Header />
+          <BottomNavbar />
+        </Route>
+        <Route path="/search">
           <Search />
           <BottomNavbar />
         </Route>
@@ -35,13 +39,13 @@ function App() {
         </Route>
         <Route path="/trusted-search/highlight/en/:id/:title">
           <Header />
-          <div className={styles.container}>
+          <section className={styles.container}>
             <Detail />
-            <section>
+            <div>
               <SearchSideBar />
               <ReadSideBar />  
-            </section>
-          </div>
+            </div>
+          </section>
           <BottomNavbar />
         </Route>
       </Switch>
