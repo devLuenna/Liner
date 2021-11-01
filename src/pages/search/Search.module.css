@@ -48,3 +48,10 @@
   padding: 0.5rem;
   margin-right: 0.3rem;
 }
+
+@media screen and (max-width: 719px) {
+  .container {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}

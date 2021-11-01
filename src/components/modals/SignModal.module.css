@@ -56,6 +56,7 @@
 .authBtn {
   cursor: pointer;
   display: flex;
+  align-items: center;
   border: 1px solid #dfe0e3;
   padding: 0.8rem 1rem;
   border-radius: 8px;
@@ -107,4 +108,29 @@
   cursor: pointer;
   text-decoration: underline;
   font-weight: 500;
+}
+
+@media screen and (max-width: 719px) {
+  .modalWrap {
+    width: 90%;
+    height: 410px;
+  }
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .signUpModalWrap {
+    width: 90%;
+  }
+  .authText {
+    font-size: 0.8rem;
+  }
+  .subText {
+    font-size: 0.75rem;
+  }
+
+  .signText {
+    font-size: 0.75rem;
+  }
 }
