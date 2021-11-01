@@ -6,7 +6,7 @@
 
 ## 📎 배포 링크
 
-http://getliner.link/
+<a href="http://getliner.link/trusted-search/en/%EB%9D%BC%EC%9D%B4%EB%84%88" target='_sub'>바로가기</a>
 
 ## 🛠 사용한 기술 스택
 
