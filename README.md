@@ -42,7 +42,7 @@
 
   <details>
   <summary>리스트 페이지 내 검색 후 결과보기(무한스크롤)</summary>
-    <img width="700" src="https://user-images.githubusercontent.com/83934037/139622143-ecfe4e8b-4fc4-4e7f-ac6f-972b257ce091.gif"/>
+    <img width="700" src="https://user-images.githubusercontent.com/83934037/139668407-3b4dacd6-06b7-4508-b96c-03322083c661.gif"/>
   </details>
   
   <details>
