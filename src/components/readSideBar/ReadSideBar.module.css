@@ -28,6 +28,8 @@
 .title {
   font-size: 1.05rem;
   margin-bottom: 0.1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;

@@ -8,6 +8,8 @@
 .title {
   margin: 1rem 0;
   color: #222222;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
 }
 .urlContainer {
   display: flex;
@@ -35,11 +37,14 @@
   align-items: center;
   color: #8b8f97;
   margin-top: 2rem;
-  font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
 }
 .highlight img {
   margin-right: 0.3rem;
+}
+
+.highlight h4 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .phrases {
@@ -52,6 +57,7 @@
   padding-left: 0.8rem;
   margin-bottom: 1.2rem;
   line-height: 140%;
+  font-family: "Roboto", sans-serif;
 }
 .phraseHighlight {
   display: flex;
@@ -95,6 +101,7 @@
 .metaData p {
   color: #575757;
   line-height: 145%;
+  font-family: "Roboto", sans-serif;
 }
 
 @media screen and (max-width: 719px) {

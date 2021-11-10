@@ -1,5 +1,4 @@
 .modalContainer {
-  font-family: "Montserrat", sans-serif;
   background-color: rgba(39, 43, 49, 0.3);
   position: fixed;
   width: 100vw;
@@ -45,6 +44,7 @@
   color: #34383b;
   font-size: 2rem;
   margin-bottom: 3rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 .closeBtn {
@@ -70,6 +70,7 @@
 .authText {
   width: 100%;
   color: #70757c;
+  font-family: "Montserrat", sans-serif;
 }
 
 .bottomSection {
@@ -81,6 +82,7 @@
 .subText {
   color: #70757c;
   font-size: 0.88rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 .signText {
@@ -90,6 +92,7 @@
   font-size: 0.88rem;
   margin-left: 0.3rem;
   font-weight: 500;
+  font-family: "Montserrat", sans-serif;
 }
 
 .termsContent {
@@ -102,12 +105,14 @@
 .termsContent span {
   width: 100%;
   display: inline;
+  font-family: "Montserrat", sans-serif;
 }
 
 .termsLink {
   cursor: pointer;
   text-decoration: underline;
   font-weight: 500;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media screen and (max-width: 580px) {

@@ -23,6 +23,7 @@ const SearchSideBar = ({ location }) => {
       }
       setRecommendeds(recommendedData);
     }
+    console.log(location.pathname.split('/'))
     getAxiosData();
     setTimeout(()=> {
       setLoading(false);
@@ -46,7 +47,7 @@ const SearchSideBar = ({ location }) => {
       )
   } else{
   return (
-    <section className={styles.container}>
+    <section className={location.pathname.split('/')[2] === 'en' ? styles.container : styles.containerList}>
       <h3 className={styles.sectionTitle}>People Also Searched For</h3>
       <div className={styles.sectionContent}>
         {recommendeds.map(el => 

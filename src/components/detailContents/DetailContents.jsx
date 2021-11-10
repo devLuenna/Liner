@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
 import styles from './DetailContents.module.css';
 
-const DetailContents = ({ item, itemUrl }) => {
+const DetailContents = ({ item }) => {
 
   const imgRef = useRef();
 
   const goURLPage = () => { //문서의 원본 웹페이지로 이동
-    window.open("about:blank").location.href = itemUrl;
+    window.open("about:blank").location.href = item.url;
   };
 
   const handleFaviconError = (e) => { //유효하지 않은 이미지 주소일 때 엑박뜨는 것 처리
@@ -28,7 +28,7 @@ const DetailContents = ({ item, itemUrl }) => {
         <img src={item.favicon_url || "/images/Favicon/default-favicon.svg"} alt="urlFavicon" 
         onError={handleFaviconError}
         onClick={goURLPage}/>
-        <a href={itemUrl} target='_sub'>{itemUrl.hostname}</a>
+        <a href={item.url} target='_sub'>{new URL(item.url).hostname}</a>
       </div>
       <div className={styles.highlight}>
         <img src="/images/Highlight/bling.svg" alt="bling"/>

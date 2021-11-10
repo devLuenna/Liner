@@ -9,7 +9,6 @@ import ContentInList from '../../components/contentInList/ContentInList';
 const Detail = ({ location }) => {
 
   const [item, setItem] = useState(null);
-  const [itemUrl, setItemUrl] = useState(null);
   const [recommendedItems, setRecommendedItems] = useState([]);
   const [loading, setLoading] = useState(true);
   
@@ -21,9 +20,7 @@ const Detail = ({ location }) => {
   useEffect(() => { //문서 상세 정보 받아오기
     async function getAxiosData(){
       const itemInfo = await getItemInfo(documentId);
-      const url = new URL(itemInfo.url);
       setItem(itemInfo);
-      setItemUrl(url);
     }
     getAxiosData();
     setTimeout(()=> {
@@ -89,7 +86,7 @@ const Detail = ({ location }) => {
     return (
       <section className={styles.container}>
         <DetailHeader />
-        <DetailContents item={item} itemUrl={itemUrl}/>
+        <DetailContents item={item} />
         <h3 className={styles.moreSectionTitle}>More Like This</h3>
         <ul className={styles.recommendedItems}>
           {recommendedItems.map(el => 

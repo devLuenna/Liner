@@ -41,6 +41,7 @@
 
 .inputSearch::placeholder {
   color: #b6b8bc;
+  font-family: "Roboto", sans-serif;
 }
 
 .searchBtn {

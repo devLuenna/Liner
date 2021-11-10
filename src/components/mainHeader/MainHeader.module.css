@@ -59,6 +59,7 @@
 }
 
 .inputSearch::placeholder {
+  font-family: "Roboto", sans-serif;
   color: #b6b8bc;
 }
 
@@ -72,7 +73,6 @@
   position: absolute;
   right: 0;
   display: flex;
-  font-family: "Montserrat", sans-serif;
   font-size: 0.85rem;
 }
 
@@ -81,6 +81,7 @@
   border-radius: 8px;
   color: rgb(51, 202, 197);
   padding: 0.5rem 1.2rem;
+  font-family: "Montserrat", sans-serif;
   /* border: 1px solid gray; */
 }
 
@@ -90,6 +91,7 @@
   color: white;
   background-color: rgb(51, 202, 197);
   padding: 0.5rem 1.2rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media screen and (max-width: 1360px) {
