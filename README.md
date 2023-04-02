@@ -1,7 +1,5 @@
 ## Introduction
 
-안녕하세요😀<br></br>본 레포지토리는 라이너의 프론트엔드 엔지니어 포지션에 입사지원 후 사전과제를 진행하면서 그 기록들을 남긴 곳입니다:)
-
 <img width="800" src="https://user-images.githubusercontent.com/83934037/139621388-8719f438-fca6-428a-aa90-884db8207a7a.png">
 
 ## 📎 배포 링크
@@ -38,7 +36,7 @@
  ┗ 📜 index.js
 ```
 
-## 🏞 구현사항 시연 GIF
+## 🏞 구현사항 GIF
 
   <details>
   <summary>리스트 페이지 내 검색 후 결과보기(무한스크롤)</summary>
